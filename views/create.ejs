@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <a class="navbar-brand" href="#" style="color:#0F52BA;">BEYOND THE BLOG</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">ADD BLOG</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">MY BLOGS</a>
+        </li>
+    </div>
+    
+    
+    </nav>
+        <div class="container">
+            <!-- <h1> THE BLOG</h1> -->
+            <H1>ADD BLOG</H1>
+            <form action="/create" method="post">
+              <label for="title"><b>Blog Name</b></label>
+              <input class="form-control" type="text" placeholder="Enter Blog Title" name="title" required>
+              <br>
+              <label for="descript"><b>Excerpt</b></label>
+              <textarea name="descript" class="form-control" rows="3"></textarea>
+              <br>
+              <label for="body"><b>Content</b></label>
+              <textarea name="body"  class="form-control" rows="10"></textarea>
+              <br>
+              <button class="btn btn-primary" type="submit">ADD</button>
+            </form>
+    
+    
+        </div>
+</body>
+</html>

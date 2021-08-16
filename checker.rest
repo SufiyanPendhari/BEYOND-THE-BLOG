@@ -1,0 +1,7 @@
+POST http://localhost:5000/api/posts
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImJyYWQiLCJlbWFpbCI6ImJyYWRAZ21haWwuY29tIn0sImlhdCI6MTYyODI1MzM3MCwiZXhwIjoxNjI4MjUzNDAwfQ.fQCjkjOn5N3IE3r1_0hny51jaNNtOd9-O-zLACdHd9Q 
+
+###
+
+POST  http://localhost:5000/api/login
+

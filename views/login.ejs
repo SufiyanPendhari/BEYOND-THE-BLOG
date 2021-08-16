@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+</head>
+<body>
+    <!-- <% if(locals.errors){ %> <% errors.forEach(function(error) { %>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <%= error.msg %>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <% }); %> <% } %> <% if(success_msg != ''){ %>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <%= success_msg %>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <% } %> <% if(error_msg != ''){ %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <%= error_msg %>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <% } %> <% if(error != ''){ %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <%= error %>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <% } %> -->
+        <div class="container">
+          <h1>BEYOND THE BLOG</h1>
+          <H3>LOGIN</H3>
+          <form action="/login" method="post">
+              <label for="username"><b>Email</b></label>
+              <input class="form-control" type="email" placeholder="Enter Email" name="username" required>
+              <br>
+              <label for="password"><b>Password</b></label>
+              <input class="form-control" type="password" placeholder="Enter Password" name="password" required>
+              <br>
+              <button class="btn btn-primary" type="submit">LOGIN</button>
+              
+              <p class="linking">New User? <a href="/register">REGISTER</a></p>
+          
+</body>
+</html>
