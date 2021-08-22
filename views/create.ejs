@@ -18,11 +18,12 @@
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">ADD BLOG</a>
-        </li>
+        
         <li class="nav-item">
           <a class="nav-link" href="/blog">MY BLOGS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">LOGOUT</a>
         </li>
     </div>
     
@@ -33,7 +34,7 @@
             <H1>ADD BLOG</H1>
             <form action="/create" method="post">
               <label for="title"><b>Blog Name</b></label>
-              <input class="form-control" type="text" placeholder="Enter Blog Title" name="title" required>
+              <input class="form-control" type="text" placeholder="Enter Blog Title" name="title" required >
               <br>
               <label for="descript"><b>Excerpt</b></label>
               <textarea name="descript" class="form-control" rows="3"></textarea>

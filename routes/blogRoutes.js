@@ -125,8 +125,10 @@ router.get('/delete/:id',ensureAuthenticated,(req,res)=>{
     })
 })
 
+
 // Create a Blog
 router.get('/create',ensureAuthenticated,(req,res)=>{
+  const data ={}
   res.render('create')
 })
 router.post('/create',ensureAuthenticated,(req,res)=>{
@@ -138,9 +140,34 @@ router.post('/create',ensureAuthenticated,(req,res)=>{
   })
   newPost.save()
   // console.log(req.body)
-  res.render('blog')
+  res.redirect('/blog')
 })
+// Update blog display
+router.get('/create/:id',ensureAuthenticated,(req,res)=>{
+  Blog.findById(req.params.id)
+  .then((data)=>{
+    
+    res.render('createUpdate',{data:data})
+  })
+})
+// handle update request
+router.post('/create/:id',ensureAuthenticated,(req,res)=>{
+  const newPost = {
+    uniqueId:req.user.id,
+    title:req.body.title,
+    descript:req.body.descript,
+    body:req.body.body,
+  }
+  Blog.findByIdAndUpdate(req.params.id,newPost)
+  .then((data)=>{
+    res.redirect('/blog')
+  }
+  )
+  // console.log(req.body)
+})
+
+// error page
 router.use((req,res)=>{
-  res.send('not found')
+  res.send('not found 404')
 })
 module.exports = router

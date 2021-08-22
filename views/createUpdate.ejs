@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEYOND THE BLOG</title>
+    <title>Document</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -18,10 +18,10 @@
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/create">ADD BLOG</a>
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">MY BLOGS</a>
         </li>
-       
         <li class="nav-item">
             <a class="nav-link" href="/logout">LOGOUT</a>
           </li>
@@ -30,38 +30,24 @@
     
     </nav>
         <div class="container">
-        
-            
-        
-          <h1>My Blogs</h1>
-        
-        
-          <% if(data.length>0){ %> <% data.forEach(function(value) { %>
-
-            <div class="banner">
-
-            </div>
-            <div class="card data-con">
-                
-                  <h4> <%= value.title %></h4>
-                  <p><%= value.descript %></p>
-                  <p > <a class=" link-read" href="/blog/<%=value.id %>">Read More</a> </p>
-                
-                
-                <div class="btn-con">
-                  <a href="/create/<%=value.id%>">
-                    <button class="button-ac btn-primary">Edit</button>
-                  </a>
-                  <a href="/delete/<%=value.id%>">
-                    <button class="button-ac">Delete</button>
-                  </a>
-                </div>
-                
-            </div>
-            <% }); %> <% } %>
-           
-        </div> 
-        
+            <!-- <h1> THE BLOG</h1> -->
+            <H1>ADD BLOG</H1>
+            <form action="/create/<%=data.id%>" method="post">
+              <label for="title"><b>Blog Name</b></label>
+              <input class="form-control" type="text" placeholder="Enter Blog Title" name="title" required value="<%= data.title%>">
+              <br>
+              <label for="descript"><b>Excerpt</b></label>
+              
+              <textarea name="descript" class="form-control" rows="3" ><%= data.descript%></textarea>
+              <br>
+              <label for="body"><b>Content</b></label>
+              <textarea name="body"  class="form-control" rows="10" value="<%= data.body%>"><%= data.body%></textarea>
+              <br>
+              <button class="btn btn-primary" type="submit">ADD</button>
+            </form>
+    
+    
+        </div>
 </body>
-</html>
 
+</html>
